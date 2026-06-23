@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rio Rise RP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- TELA DE LOGIN -->
+  <div id="auth-screen" class="screen">
+    <div class="auth-box">
+      <h1>Rio Rise <span class="accent">RP</span></h1>
+
+      <div id="login-form">
+        <h2>Entrar</h2>
+        <input type="text" id="login-username" placeholder="Usuário" />
+        <input type="password" id="login-password" placeholder="Senha" />
+        <button onclick="handleLogin()">Entrar</button>
+        <p class="switch-link" onclick="toggleForms()">Não tem conta? Cadastre-se</p>
+      </div>
+
+      <div id="register-form" class="hidden">
+        <h2>Criar Conta</h2>
+        <input type="text" id="register-username" placeholder="Usuário" />
+        <input type="password" id="register-password" placeholder="Senha (mín. 6 caracteres)" />
+        <button onclick="handleRegister()">Cadastrar</button>
+        <p class="switch-link" onclick="toggleForms()">Já tem conta? Entrar</p>
+      </div>
+
+      <p id="auth-error" class="error hidden"></p>
+    </div>
+  </div>
+
+  <!-- TELA DO JOGO -->
+  <div id="game-screen" class="screen hidden">
+    <div id="hud">
+      <div id="player-info">
+        <span id="player-name"></span>
+      </div>
+      <div id="player-list">
+        <h3>Jogadores Online</h3>
+        <ul id="player-list-items"></ul>
+      </div>
+    </div>
+
+    <div id="chat-box">
+      <div id="chat-messages"></div>
+      <input type="text" id="chat-input" placeholder="Pressione Enter para conversar..." />
+    </div>
+
+    <div id="admin-panel" class="hidden">
+      <h3>Painel Admin</h3>
+      <input type="text" id="admin-target" placeholder="Nome do jogador" />
+      <button onclick="adminCommand('kick')">Expulsar</button>
+      <input type="number" id="admin-amount" placeholder="Valor $" />
+      <button onclick="adminCommand('givemoney')">Dar Dinheiro</button>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
