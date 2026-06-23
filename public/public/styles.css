@@ -1,0 +1,239 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+body {
+  background: #0a0a0f;
+  color: #e0e0e0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.screen {
+  width: 100vw;
+  height: 100vh;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* ---------- Tela de Login ---------- */
+#auth-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at top, #14142b 0%, #0a0a0f 70%);
+}
+
+.auth-box {
+  background: rgba(20, 20, 35, 0.9);
+  border: 1px solid #00ff8855;
+  border-radius: 12px;
+  padding: 32px;
+  width: 90%;
+  max-width: 360px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.15);
+}
+
+.auth-box h1 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.accent {
+  color: #00ff88;
+}
+
+.auth-box h2 {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: #aaa;
+}
+
+.auth-box input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 12px;
+  background: #1a1a2e;
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 14px;
+}
+
+.auth-box input:focus {
+  outline: none;
+  border-color: #00ff88;
+}
+
+.auth-box button {
+  width: 100%;
+  padding: 12px;
+  background: #00ff88;
+  color: #0a0a0f;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+.auth-box button:hover {
+  opacity: 0.85;
+}
+
+.switch-link {
+  margin-top: 14px;
+  font-size: 13px;
+  color: #00ff88;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.error {
+  margin-top: 14px;
+  color: #ff5566;
+  font-size: 13px;
+}
+
+/* ---------- Tela do Jogo ---------- */
+#game-screen {
+  position: relative;
+  background: #0e0e16;
+}
+
+#hud {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 10;
+}
+
+#player-info {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px 14px;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #00ff88;
+}
+
+#player-list {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 14px;
+  border-radius: 6px;
+  min-width: 160px;
+}
+
+#player-list h3 {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 6px;
+}
+
+#player-list-items {
+  list-style: none;
+  font-size: 13px;
+}
+
+#player-list-items li {
+  padding: 2px 0;
+  color: #ccc;
+}
+
+#chat-box {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  width: 320px;
+  max-width: 90vw;
+  z-index: 10;
+}
+
+#chat-messages {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 6px;
+  padding: 10px;
+  height: 160px;
+  overflow-y: auto;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+#chat-messages p {
+  margin-bottom: 4px;
+}
+
+#chat-messages .system {
+  color: #ffaa00;
+  font-style: italic;
+}
+
+#chat-messages .username {
+  color: #00ff88;
+  font-weight: 600;
+}
+
+#chat-input {
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #333;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 13px;
+}
+
+#chat-input:focus {
+  outline: none;
+  border-color: #00ff88;
+}
+
+#admin-panel {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #ff5566;
+  border-radius: 6px;
+  padding: 14px;
+  z-index: 10;
+  width: 200px;
+}
+
+#admin-panel h3 {
+  color: #ff5566;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+#admin-panel input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: #1a1a2e;
+  border: 1px solid #333;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+}
+
+#admin-panel button {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 8px;
+  background: #ff5566;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
